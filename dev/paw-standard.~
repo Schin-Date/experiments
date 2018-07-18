@@ -1,0 +1,11 @@
+nt/cre 60 '' 2 ' ' 500 day tide
+nt/read 60 t_ref0
+nt/plot 60.tide%day ! ! ! ! 'L'
+
+
+   paw++> ntuple/create 100 'Emax vs Ngamma' 3 ' ' 200 EGmax Ngamma ThetaL
+   paw++> ntuple/read 100 emax-ngamma.out
+   paw++> nt/plot 100.EGmax%Ngamma ! ! ! ! 'L'
+   paw++> pict/print egmax-ngamma.ps
+   paw++> nt/plot 100.ThetaL%Ngamma ! ! ! ! 'L'
+   paw++> pict/print theta-ngamma.ps

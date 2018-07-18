@@ -1,0 +1,12 @@
+*** Begin of history file: Mon Jan 29 10:43:58 2001
+nt/cre 60 '' 2 ' ' 500 day tide
+nt/read 60 t_ref0
+nt/plot 60.tide%day ! ! ! ! 'L'
+pict/print test.ps
+mess ''//$date//' '//$time//''
+nt/plot 60.tide%day ! ! ! ! 'L'
+mess ''//$date//' '//$time//''
+exec paw-standard
+exec paw-standard.
+exec /users/schin/note/figs/paw/simple/timestamp.kumac
+*** End   of history file: Mon Jan 29 12:03:51 2001

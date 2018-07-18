@@ -1,0 +1,12 @@
+*   Simple plot for 2D data
+*
+nt/cre 60 '' 2 ' ' 500 day tide
+*     id    #var  #point var1 var2
+*---------------------------------
+nt/read 60 t_ref0
+*      id  filenam
+*----------------------
+nt/plot 60.tide%day ! ! ! ! 'L'
+*          scatter         line
+*------------------------------
+pict/print testprint.ps

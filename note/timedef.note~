@@ -1,0 +1,42 @@
+\documentstyle[12pt]{jarticle}
+\begin{document}
+\begin{verbatim}
+
+
+                   Definition of times and epochs
+
+  For the units to count time intervals, there are physical time like TAI
+and terrestial times like UA1 and GMST. The physical time defines a second
+by means of a well defined physics phenomena like atomic decay life time
+at the rest frame of atoms. The terrestial times are defined as angles
+of the earth rotation around its axis with respect to different terrestial
+objects, e.g. the Sun and stars. 
+
+The earth rotations
+  The earth is revolving around the Sun. This defines the ¡Úecliptic (²«Æ»)¡Û
+circle around the earth. The ecliptic circle is a circle centered at
+the center of the earth and is on the plane of the revolution.
+  The earth is rotating around its axis. The axis defines the direction north.
+The polar angle of the axis with respect to the normal direction to the
+revolution plane is called ¡Úobliquity of the ecliptic (²«Æ»Ê¿¶Ñ·¹¼Ð³Ñ)¡Û and
+given by ¦Å= 23¡ë26' 21''.488.  A plane parpendicular to the earth rotation
+axis defines the ¡Úcelestial equator()¡Û. The angle between the celestial
+equator and the ecliptic is the obliquity of the ecliptic.
+  The direction of the revolution and the rotation are the same in a sense
+that vectors of the revolution and rotation axes direct into the same
+hemisphare.
+  One of two points where the ecliptic and the celestial equator crosses  
+is the ¡Úvernal equinox(½ÕÊ¬ÅÀ)¡Û. A line from the Sun to the earth goes 
+through this point on the equinox. 
+
+
+\end{verbatim}
+\end{document}
+
+¡Ú()¡Û
+¡¦¡§¡¨¡©¡ª¡«¡¬¡­¡®¡¯¡°¡±¡²¡³¡´¡µ¡¶¡·¡¸¡¹¡º¡»¡¼¡½¡¾¡¿¡Á¡Â¡Ã¡Ä¡Å¡Æ¡Ç¡È¡É
+¡Ô¡Õ¡Ø¡Ù¡Þ¡ß¡à¡â¡å¡æ¡ç¡è¡é¡ê¡ì¡í¡î¡ï¡ð¡ñ¡ò¡ó¡ô¡õ¡ö¡ø
+¡ù¡ú¡û¡ü¡ý¡þ¡¡¢¡¢¢¢£¢¤¢¥¢¦¢§¢¨¢©¢ª¢«¢¬¢­¢®
+¢º¢»¢¼¢½¢¾¢¿¢À¢Á¢Ê¢Ë¢Ì¢Í¢Î¢Ï¢Ð¢Ü¢Ý¢Þ¢ß¢à¢á¢â¢ã¢ä¢å¢æ¢ç¢è¢é¢ê¢ò¢ó¢ô¢õ¢ö¢÷¢ø¢ù
+¦¡¦¢¦£¦¤¦¥¦¦¦§¦¨¦©¦ª¦«¦¬¦­¦®¦¯¦°¦±¦²¦³¦´¦µ¦¶¦·¦¸
+¦Á¦Â¦Ã¦Ä¦Æ¦Ç¦È¦É¦Ê¦Ë¦Ì¦Í¦Î¦Ï¦Ð¦Ñ¦Ò¦Ó¦Ô¦Õ¦Ö¦×¦Ø

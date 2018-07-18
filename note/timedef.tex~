@@ -1,0 +1,271 @@
+\documentstyle[12pt]{jarticle}
+\pagestyle{empty}                 % <======= surpress page numbers
+\newcommand{\bld}[1]{\mbox{\boldmath $#1$}}
+
+\begin{document}
+%\begin{verbatim}
+%\end{verbatim}
+
+\begin{flushright}{\small Note "timedef"/\today/
+°ËÃ£ $\in$ BD $\subset$ SP8} \end{flushright}
+\begin{center}{\Large \bf Time Systems} \end{center}
+
+
+\section{Time System}
+
+  For the units to count time intervals, there are physical time like TAI
+and terrestial times like UA1 and GMST. The physical time defines a second
+by means of a well defined physics phenomena like atomic decay life time
+at the rest frame of atoms. The terrestial times are defined as angles
+of the earth rotation around its axis with respect to different terrestial
+objects, e.g. the Sun and stars. Descriptions here are based on Ref.
+\cite{ref:almanac}
+
+\bigskip
+
+\noindent
+{\bf Atomic and Dynamical times} 
+\begin{itemize}
+\item TAI (International Atomic Time) defines the unit SI second.
+\item TDT (Terrestial Dynamical Time) is the time passing at the 
+center of gravity of the earth.
+\item TDB (Barycentric Dynamical Time) is the time passing at the
+center of gravity of the slolar system.
+\end{itemize}
+
+One second in TAI and TDT are practically the same and their origins are
+related as $TDT = TAI + 32.184$sec.
+
+\bigskip
+
+\noindent
+{\bf Universal time} 
+ 
+The universal time (UT) can be defined as the azimuth angle of 
+the {\bf meridian(»Ò¸áÀþ)} at Greenwich from
+a straight line connecting the Sun and the center of the earth.
+The origin of the angle is the direction to the earth
+viewing from the Sun.
+The angle is expressed in hour:minuit:second.
+One complete rotation with respect to the Sun defines a day
+$=$ 24 hours.
+The length of a day in time depends on year and season of the measurement.
+The origin of UT has therefore no absolute meaning in the time scales.
+
+ UT may be identified by a local measurement provided the 
+latitude and longitude of the location is known.
+The value (UT0) is however depending on the location due to small fluctuation
+of the rotation axis of the earth. The value corrected for the location
+dependence is called {\bf UT1}.
+
+{\bf UTC} (Coordinated Universal Time) counts time in the unit of SI second
+and tuned so that $|\Delta UT = UT1 - UTC| < 0.9$ sec. To do this, an integral
+number of seconds (leap seconds) are added to TAI at the last seconds of 
+June and December. Thus $\Delta AT = TAI - UTC$ is always an integer seconds.
+Values of $\Delta AT$ in recent years are \cite{ref:nasa},
+
+\noindent
+from 1996 01 Jul, UTC to 1997 01 Jul, UTC   $\Delta AT = +30$ sec  \newline
+\noindent
+from 1997 01 Jul, UTC to further notice     $\Delta AT = +31$ sec  
+\begin{itemize}
+\item No leap second will be introduced in UTC on 30 June 1998. \cite{ref:usno}
+\item The Japanese standard time is given as $UTC + 9$hours.
+\end{itemize}
+
+\noindent
+{\bf Greenwich mean sidereal time (GMST)} \newline
+Sidereal time is the rotation angle of the earth around its axis
+in a frame of reference fixed against the stars. The angle of the
+meridian of Greenwich is measured
+along the celestial equator to the direction of the earth rotation
+from the mean equinox.
+
+GMST at 0h UT on a date JD in Julian date is given as
+\begin{equation}
+ \mbox{GMST (sec)} = 2.411054841 \times 10^{4}
+                + 8.640184812866 \times 10^{6}  T_{U}
+                + 0.093104  T_{U}^2
+                - 6.2 \times 10^{-6} T_{U}^3
+\label{eqn:GMST}
+\end{equation}
+where
+\[ T_{U} = (JD - 2451545.0) / 36525 \]
+Julian date (JD) is the number of solar days from an origin. JD of
+1998/Jan/01 0h UT is 2450814.5 JD and 2000/Jan/01 12h UT $=$ 
+JD2451545.0.
+
+To obtain a value of GMST (usually in hours) for a moment of time UT, 
+first calculate GMST for 0h UT of the date. Add or subtract multiples of
+24h as necessary.
+Add then to the result 
+UT of the moment $\times$ {\underline{1.00273790935}}
+ if the moment is in the year 1998.
+The number multiplied to UT is the length of one mean solar day 
+in the unit of mean sidereal day in the year 1998.
+
+An example is shown here. See on page B7 in \cite{ref:almanac}.
+We calculate GMST for 1998/7/8 09:44:30 UT. First we find 
+GMST(1998/7/8 0h UT) using Eq. (\ref{eqn:GMST}).
+JD of the date at 0h is found from tables 
+(\ref{table:daysinyear},\ref{table:daysinmonth})
+that JD $= 2450814.5 + 181 + 7 = 2451002.5$. 
+Eq. (eqn:GMST) gives 
+\newpage
+\begin{eqnarray*}
+\lefteqn{\mbox{GMST(1998/7/8 0h UT)}} \\
+  &=& 2.411054841 \times 10^{4} - 1.283312871 \times 10^{5}
+         + 2.05394 \times 10^{-5} - 2.0 \times 10^{-11} \\
+       &=& - 1.042207387 \times 10^{5} \; \mbox{seconds}
+        = -28.95020519 \; \mbox{hours} \\
+   &=& 19:02:59.2613 \; \mbox{(h:m:s)}
+\end{eqnarray*}
+The first line in the above eqations shows that the third and fourth
+terms are negligible for the most purposes. From the second to third
+line, we have added 48h to get a regular expression for time (angle).
+The next step is to add the part of time passed from 0h UT to
+09:44:30 UT. The sidereal time passed during this time span is
+\[ 09:44:30 \;\mbox{UT} = 9.7417 \;\mbox{hours UT} 
+        = 9.7683 \;\mbox{sidereal hours} \]
+We thus obtain,
+\[\mbox{GMST(1998/7/8 09:44:30 UT)} = 4.8181 \mbox{hours} = 04:49:05 \;.\]
+
+
+\section{Coordinate System}
+\noindent
+{\bf The earth rotations}
+
+  The earth is revolving around the Sun. This defines the ¡Úecliptic 
+(²«Æ»)¡Ûcircle around the earth. The ecliptic circle is a circle centered at
+the center of the earth and is on the plane of the revolution.
+  The earth is rotating around its axis. The axis defines the direction north.
+The polar angle of the axis with respect to the normal direction to the
+revolution plane is called ¡Úobliquity of the ecliptic (²«Æ»Ê¿¶Ñ·¹¼Ð³Ñ)¡Û and
+given by ¦Å= 23¡ë26' 21''.488.  A plane parpendicular to the earth rotation
+axis defines the ¡Úcelestial equator(Å·¤ÎÀÖÆ»)¡Û. 
+The angle between the celestial
+equator and the ecliptic is the obliquity of the ecliptic.
+  The direction of the revolution and the rotation are the same in a sense
+that vectors of the revolution and rotation axes direct into the same
+hemisphare. When one views the Sun-earth system from the north side
+of the celestial sphare, the earth is revolving anti-clockwise
+around the Sun and it rotates anti-clockwise around its axis.
+  One of two points where the ecliptic and the celestial equator crosses  
+is the ¡Úvernal equinox(½ÕÊ¬ÅÀ)¡Û. A line from the Sun to the earth goes 
+through this point on the equinox. 
+
+\begin{table}[p]
+\begin{center}
+\caption{ 
+Julian day number on January 1st of a year at 0h UT.
+}
+\label{table:daysinyear}
+\begin{tabular}{c|c|c}
+year& JD &  \\ \hline
+1996 & 2450083.5 \\
+1997 & 2450449.5 \\
+1998 & 2450814.5 \\
+1999 & 2451179.5 \\
+2000 & 2451544.5 \\
+2001 & 2451910.5 \\
+2002 & 2452275.5 \\
+2003 & 2452640.5 \\
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[p]
+\begin{center}
+\caption{ 
+Number of days in a month and that to the end 
+of a month from the begining of a normal year.}
+\label{table:daysinmonth}
+\begin{tabular}{c|c|c}
+month& & \\ \hline
+1 & 31 & 31 \\
+2 & 28 & 59 \\
+3 & 31 & 90 \\
+4 & 30 & 120 \\
+5 & 31 & 151 \\
+6 & 30 & 181 \\
+7 & 31 & 212 \\
+8 & 31 & 243 \\
+9 & 30 & 273 \\
+10 & 31 & 304 \\
+11 & 30 & 334 \\
+12 & 31 & 365 \\
+\end{tabular}
+\end{center}
+\end{table}
+
+\newpage
+\begin{itemize}
+\item {\bf geocentric}: with reference to the center of the Earth.
+\item {\bf topocentric}: with reference to a point on the surface of the earth.
+\item {\bf zenith (Å·Äº), geocentric}: the point on the celestial sphere
+which the line from the center of the Earth through the observer
+crosses.
+\item {\bf hour circle}: a great circle on the celestial sphere that passes through the celestial poles and is therefore perpendicular to the celestial equator.
+\item {\bf right ascension (RA)}: angular distance on the celestial sphere measured eastward along the celestial equator from the equinox to the hour circle passing through the celestial object.
+\item {\bf declination}: angular distanc on the celestial sphere north or south of the celestial equator. It is measured along the hour circle passing through the celestial object. 
+\item {\bf meridian}: a great circle passing through the celestial poles and through
+the zenith of the location on the surface of the Earth.
+\item {\bf hour angle}: angular distance on the celestial sphere measured eastward 
+along the celestial equator  from the hour circle of the object to the meridian.
+\item {\bf latitude, celestial}: angular distance on the celestial sphere 
+measured north or south of the ecliptic along the great circle passing through the poles of the ecliptic and the celestial object.
+\item {\bf latitude, terrestial}: angular distance on the Earth
+measured north or south of the equator along the meridian of the location.
+\item {\bf longitude, celestial}: angular distance on the celestial sphere 
+measured eastward 
+along the ecliptic 
+from the dynamical equinox 
+to the great circle passing through
+th epoles of the ecliptic
+and the celestial object.
+\item {\bf longitude, terrestial}: angular distance 
+measured along the Earth's equator
+from the Greenwich meridian
+to the meridian of a location.
+\end{itemize}
+
+\section{Moon}
+\noindent
+{\bf Low precision formulae for geocentric coordinates of the Moon}
+
+The time argument $T_U$ is defined as
+\[ T_U = (JD - 2451545.0) / 36525 \]
+The universal time UT should be included in JD as a fraction of a day, namely,
+JD $=$ JD(0h UT) + UT/24.
+
+
+
+
+
+
+
+
+\begin{thebibliography}{99}
+\bibitem{ref:almanac} ``The Astronomical Almanac, 1998'',
+U.S. Government printing office, Washington.
+\bibitem{ref:nasa} http://image.gsfc.nasa.gov/poetry/activity/earthr4.html
+\bibitem{ref:usno} ftp://maia.usno.navy.mil/ser7/ser7.dat
+\end{thebibliography}
+
+
+
+
+
+
+
+
+
+\end{document}
+
+¡Ú()¡Û
+¡¦¡§¡¨¡©¡ª¡«¡¬¡­¡®¡¯¡°¡±¡²¡³¡´¡µ¡¶¡·¡¸¡¹¡º¡»¡¼¡½¡¾¡¿¡Á¡Â¡Ã¡Ä¡Å¡Æ¡Ç¡È¡É
+¡Ô¡Õ¡Ø¡Ù¡Þ¡ß¡à¡â¡å¡æ¡ç¡è¡é¡ê¡ì¡í¡î¡ï¡ð¡ñ¡ò¡ó¡ô¡õ¡ö¡ø
+¡ù¡ú¡û¡ü¡ý¡þ¡¡¢¡¢¢¢£¢¤¢¥¢¦¢§¢¨¢©¢ª¢«¢¬¢­¢®
+¢º¢»¢¼¢½¢¾¢¿¢À¢Á¢Ê¢Ë¢Ì¢Í¢Î¢Ï¢Ð¢Ü¢Ý¢Þ¢ß¢à¢á¢â¢ã¢ä¢å¢æ¢ç¢è¢é¢ê¢ò¢ó¢ô¢õ¢ö¢÷¢ø¢ù
+¦¡¦¢¦£¦¤¦¥¦¦¦§¦¨¦©¦ª¦«¦¬¦­¦®¦¯¦°¦±¦²¦³¦´¦µ¦¶¦·¦¸
+¦Á¦Â¦Ã¦Ä¦Æ¦Ç¦È¦É¦Ê¦Ë¦Ì¦Í¦Î¦Ï¦Ð¦Ñ¦Ò¦Ó¦Ô¦Õ¦Ö¦×¦Ø

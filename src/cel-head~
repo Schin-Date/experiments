@@ -1,0 +1,9 @@
+set font duplex
+texture solid
+title left 'U2T1 (m122/s122)'
+case       ' V V   V V  V V '
+title bottom 'time (days)'
+title 3.3 7.8 '9801'
+set limit xmin -5 xmax 11 
+set limit ymin -36 ymax 60
+set order x,y
